@@ -1,0 +1,6 @@
+{
+  "name": "Gran7 OS",
+  "description": "Plataforma de gestão de processos internos, solicitações, aprovações e tarefas corporativas da Gran7 - Nutrição e Fisiologia Vegetal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

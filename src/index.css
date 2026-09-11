@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --bg-app: oklch(98% 0.006 155);
+    --bg-surface: oklch(100% 0 0);
+    --bg-surface-2: oklch(96% 0.006 155);
+    --bg-sunken: oklch(97% 0.006 155);
+
+    /* Sidebar (near-black, brand) */
+    --bg-sidebar: oklch(15% 0.012 155);
+    --bg-sidebar-hover: oklch(22% 0.015 155);
+    --text-sidebar: oklch(72% 0.01 155);
+    --text-sidebar-hover: oklch(97% 0.006 155);
+
+    /* Borders */
+    --border-color: oklch(91% 0.008 155);
+    --border-strong: oklch(85% 0.01 155);
+
+    /* Text */
+    --text-primary: oklch(18% 0.01 155);
+    --text-secondary: oklch(48% 0.01 155);
+    --text-muted: oklch(60% 0.01 155);
+    --text-on-brand: oklch(15% 0.012 155);
+
+    /* Brand green (Gran7 lime) — accent is for FILLS, brand-text is for TEXT on light bg */
+    --brand-accent: oklch(78% 0.22 138);
+    --brand-accent-hover: oklch(72% 0.2 138);
+    --brand-text: oklch(45% 0.2 138);
+    --brand-soft: oklch(92% 0.09 138);
+    --brand-soft-border: oklch(85% 0.13 138);
+    --brand-soft-text: oklch(38% 0.15 138);
+    --brand-row-hover: oklch(96% 0.05 138);
+
+    /* Chart tones (green scale) */
+    --chart-1: oklch(78% 0.22 138);
+    --chart-2: oklch(74% 0.19 138);
+    --chart-3: oklch(85% 0.14 138);
+    --chart-4: oklch(90% 0.09 138);
+
+    /* Neutral dark (badges, avatar fallback) */
+    --neutral-dark: oklch(30% 0.01 155);
+    --neutral-dark-2: oklch(25% 0.01 155);
+    --neutral-light: oklch(90% 0.01 155);
+  }
+
+  /* Global Cursor Pointer Rules for Clickable Elements */
+  button,
+  a,
+  select,
+  summary,
+  [role="button"],
+  [tabindex="0"],
+  label,
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+
+  /* Interactive items with click handlers */
+  [data-clickable="true"],
+  .clickable {
+    cursor: pointer;
+  }
+}
+
+html {
+  font-size: 112.5%; /* Base zoom adjustment from 16px to 18px */
+}
+
+html, body, #root {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0.12);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-accent);
+}
